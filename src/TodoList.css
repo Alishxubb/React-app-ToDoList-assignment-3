@@ -1,0 +1,156 @@
+/* Reset styles for body, html, and #root */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Georgia', serif; /* Ensure consistent font-family */
+}
+
+/* General styling for the container */
+.todo-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto; /* Center the container horizontally and add vertical spacing */
+    margin-top: 370px; /* Add additional top margin to move it down */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(236, 4, 4, 0.1);
+    position: relative;
+    overflow: auto; /* Add overflow property to handle overflow content */
+}
+
+/* Overlay for better text readability */
+.todo-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Adjust overlay transparency */
+    z-index: -1;
+}
+
+/* Header styling */
+.todo-container h1, .additional-header {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Add task container styling */
+.add-task-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Add button styling */
+.add-button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg,#ca1070 , #ca1070); /* Gradient background */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34); /* Gradient background on hover */
+}
+
+/* Task list styling */
+.task-list {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    color: #ff0000;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333; /* Darker background for better contrast */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.task-item.completed {
+    background-color: #555; /* Different color for completed tasks */
+    text-decoration: line-through;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.task-text {
+    flex: 1;
+    margin-right: 10px;
+    outline: none;
+    color: #ffffff;
+}
+
+.task-text[contenteditable]:focus {
+    border-bottom: 2px solid #007bff;
+}
+
+/* Delete button styling */
+.delete-button {
+    padding: 5px 10px;
+    background: linear-gradient(45deg, #dc3545, #c82333); /* Gradient background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background: linear-gradient(45deg, #c82333, #bd2130); /* Gradient background on hover */
+}
+
+/* Clear completed button styling */
+.clear-button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #b2e704, #ca1070); /* Gradient background */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.clear-button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34); /* Gradient background on hover */
+}
+
+/* src/App.css */
+.App {
+    text-align: center;
+    background-image: url('https://hobby4geek.com/wp-content/uploads/2023/12/ravensburger-puzzle-pokemon-pikachu-friends-2x24-pieces-2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 30px; /* Add padding to give space from edges */
+    overflow: hidden; /* Prevent scrolling */
+}
